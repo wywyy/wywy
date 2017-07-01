@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>个人简介</title>
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/jquery.zySlide.css">
+		<script type="text/javascript" src="js/jquery.min.js" ></script>
+		<script>
+//			$(function(){
+//				$("#menu1").hover(function(){
+//					$("#menu1>.menu-line").css("border-right-color","#E1751C");
+//					$("#menu1 .menu-img1").css("background-image","url(img/141.png)");
+//					$("#menu1 .menu-text").css("color","#E1751C");
+//				});
+//				$("#menu1").mouseleave(function(){
+//                  $("#menu1>.menu-line").css("border-right-color","#EEEEEE");
+//                  $("#menu1 .menu-img1").css("background-image","url(img/142.png)");
+//                  $("#menu1 .menu-text").css("color","#EEEEEE");
+//              });
+                
+//              $("#menu2").hover(function(){
+//					$("#menu2>.menu-line").css("border-right-color","#E1751C");
+//					$("#menu2 .menu-img2").css("background-image","url(img/131.png)");
+//					$("#menu2 .menu-text").css("color","#E1751C");
+//				});
+//				$("#menu2").mouseleave(function(){
+//                  $("#menu2>.menu-line").css("border-right-color","#EEEEEE");
+//                  $("#menu2 .menu-img2").css("background-image","url(img/132.png)");
+//                  $("#menu2 .menu-text").css("color","#EEEEEE");
+//              });
+//              
+//              $("#menu3").hover(function(){
+//					$("#menu3>.menu-line").css("border-right-color","#E1751C");
+//					$("#menu3 .menu-img3").css("background-image","url(img/122.png)");
+//					$("#menu3 .menu-text").css("color","#E1751C");
+//				});
+//				$("#menu3").mouseleave(function(){
+//                  $("#menu3>.menu-line").css("border-right-color","#EEEEEE");
+//                  $("#menu3 .menu-img3").css("background-image","url(img/121.png)");
+//                  $("#menu3 .menu-text").css("color","#EEEEEE");
+//              });
+//              
+//              $("#menu4").hover(function(){
+//					$("#menu4>.menu-line").css("border-right-color","#E1751C");
+//					$("#menu4 .menu-img4").css("background-image","url(img/112.png)");
+//					$("#menu4 .menu-text").css("color","#E1751C");
+//				});
+//				$("#menu4").mouseleave(function(){
+//                  $("#menu4>.menu-line").css("border-right-color","#EEEEEE");
+//                  $("#menu4 .menu-img4").css("background-image","url(img/111.png)");
+//                  $("#menu4 .menu-text").css("color","#EEEEEE");
+//             });         
+//			})
+			
+
+		$(function(){
+			$(".menu1").find(".menu-img1").css("background-image","url(img/141.png)");
+			$("#menu1").hover(
+				  function () {
+				  		$("#menu1 .menu-img1").css("background-image","url(img/141.png)");
+				  },
+				  function () {
+				  		if(!$(this).hasClass("active"))
+				  			$("#menu1 .menu-img1").css("background-image","url(img/142.png)");
+				  }
+			);
+			$("#menu2").hover(
+				  function () {
+				  		$("#menu2 .menu-img2").css("background-image","url(img/131.png)");
+				  },
+				  function () {
+				  		if(!$(this).hasClass("active"))
+				  			$("#menu2 .menu-img2").css("background-image","url(img/132.png)");
+				  }
+			);
+			$("#menu3").hover(
+				  function () {
+				  		$("#menu3 .menu-img3").css("background-image","url(img/122.png)");
+				  },
+				  function () {
+				  		if(!$(this).hasClass("active"))
+				  			$("#menu3 .menu-img3").css("background-image","url(img/121.png)");
+				  }
+			);
+			$("#menu4").hover(
+				  function () {
+				  		$("#menu4 .menu-img4").css("background-image","url(img/112.png)");
+				  },
+				  function () {
+				  		if(!$(this).hasClass("active"))
+				  			$("#menu4 .menu-img4").css("background-image","url(img/111.png)");
+				  }
+			);
+			$(".menu1").click(function(){//
+				var thisobj = $(this);
+				$(this).siblings(".menu1").each(function(){
+					$(this).removeClass("active");
+					if($(this).attr("tthis")=="1"){
+						$(this).find(".menu-img1").css("background-image","url(img/142.png)");
+					}
+					if($(this).attr("tthis")=="2"){
+						$(this).find(".menu-img2").css("background-image","url(img/132.png)");
+					}
+					if($(this).attr("tthis")=="3"){
+						$(this).find(".menu-img3").css("background-image","url(img/121.png)");
+					}
+					if($(this).attr("tthis")=="4"){
+						$(this).find(".menu-img4").css("background-image","url(img/111.png)");
+					}
+				});
+				
+				$(this).addClass("active");
+				if($(this).attr("tthis")=="1"){
+					$(this).find(".menu-img1").css("background-image","url(img/141.png)");
+				}
+				if($(this).attr("tthis")=="2"){
+					$(this).find(".menu-img2").css("background-image","url(img/131.png)");
+				}
+				if($(this).attr("tthis")=="3"){
+					$(this).find(".menu-img3").css("background-image","url(img/122.png)");
+				}
+				if($(this).attr("tthis")=="4"){
+					$(this).find(".menu-img4").css("background-image","url(img/112.png)");
+				}
+			});
+			$("#first").scroll(function(){
+				 $("#menu1>.menu-line").css("border-right-color","#E1751C");
+				 $("#menu1 .menu-img1").css("background-image","url(img/141.png)");
+				 $("#menu1 .menu-text").css("color","#E1751C");
+			})
+			       
+		});
+		</script>
+	</head>
+	<body>
+		<div class="first">
+			<div class="first-contain" id="first">
+					<div class="menu">
+						<a id="menu1" class="menu1 active" tthis="1"  href="#first">
+							<div  class="menu-line"></div>
+							<div class="menu-item">
+								<div class="menu-img1"></div>
+								<div class="menu-text">
+									<div class="menu-text1">首页</div>
+									<div class="menu-text2">HOME</div>
+								</div>
+							</div>
+						</a>
+						<a id="menu2" class="menu1" href="#two" tthis="2">
+							<div class="menu-line"></div>
+							<div class="menu-item">
+								<div class="menu-img2"></div>
+								<!--<img class="menu-img" src="img/132.png" />-->
+								<div class="menu-text">
+									<div class="menu-text1">作品</div>
+									<div class="menu-text2">WORKS</div>
+								</div>
+							</div>
+						</a>
+						<a id="menu3" class="menu1" href="#three" tthis="3">
+							<div class="menu-line"></div>
+							<div class="menu-item">
+								<div class="menu-img3"></div>
+								<div class="menu-text">
+									<div class="menu-text1">关于我</div>
+									<div class="menu-text2">ABOUT ME</div>
+								</div>
+							</div>
+						</a>
+						<a id="menu4" class="menu1" href="#four" tthis="4">
+							<div class="menu-line"></div>
+							<div class="menu-item">
+								<div class="menu-img4"></div>
+								<div class="menu-text">
+									<div class="menu-text1">联系我</div>
+									<div class="menu-text2">CALL ME</div>
+								</div>
+							</div>
+							</div>
+						</a>
+					<div class="first-center">
+						<div class="first-title">个人网页</div>
+						<div class="first-line"></div>
+						<div class="first-me">
+						<div class="w">吴</div>
+						<div class="y">月</div>
+						</div>
+					</div>
+			</div>
+			
+			<div class="two-contain" id="two">
+					<div class="first-center">
+					  <div id="line">
+					  	 <div class="two-line1"></div>
+				         <div class="line-text">作品</div>
+				         <div class="two-line2"></div>
+					  </div>
+				      <div class="two-work-text">
+				      	<div class="item">作品1</div>
+				      	<div class="item">作品2</div>
+				      	<div class="item">作品3</div>
+				      </div>
+				       <div class="two-work-img">
+					       	<div id="Slide1" class="zy-Slide">
+							<!--prev:元素中的文本通常会保留空格和换行符。而文本也会呈现为等宽字体。-->
+							<section>前一张</section>
+							<section>后一张</section>
+							<ul>
+								<!--alt + shift : 可以创建一个矩形选择区域-->
+								<li><img src="img/1.jpg" /></li>
+								<li><img src="img/2.jpg" /></li>
+								<li><img src="img/3.jpg" /></li>
+								<li><img src="img/4.jpg" /></li>
+								<li><img src="img/5.jpg" /></li>
+								<li><img src="img/6.jpg" /></li>
+								<li><img src="img/7.jpg" /></li>
+							</ul>
+						    </div>
+				       </div>
+					</div>
+			</div>
+			
+			<div class="three-contain" id="three">
+					<div class="first-center">
+						<div class="info1">
+			                <div class="my-img"></div>
+			                <div class="info-line"></div>
+		                </div>
+		                <div class="info2">
+			                <div class="my-name">吴月</div>
+			                <div class="info-text">
+			                 	 <div class="info-title">自我评价：</div>
+			                     <div class="info-p">
+			                     	我有较强的条理性和较强的思维能力。有扎实的美术基础和较高的审美能力。
+								        能独立完成用户界面与用户交互流程设计，网络媒体设计，移动媒体交互设计，
+								        移动媒体综合开发，UI(用户界面)设计，wp、ios、安卓系统交互界面设计。
+								        接收过系统的美术教育，有较高美术素养
+			                     </div>
+			                </div>
+			                <div class="info-text">
+			                 	 <div class="info-title">技术特长/职业技能:</div>
+			                 	 <div class="info-p">
+			                 	 	 1.接受过系统的素描、色彩等美术训练。对色彩、构图等美术基础有一定认识。<br />
+                          			 2.熟练掌握Photograph、Illustrator、Cdr等专业技能软件，对人机交互，用户体验等方面进行过系统的学习。
+			                 	 </div>
+			                </div>
+		                </div>
+		                <div class="info-skill">
+		                	<div class="skill1">
+		                		<canvas id="canvas1" class="skill-img" width="500" height="500" style="background:transparent;"></canvas>
+		                		<div class="skill-text">微信小程序</div>
+		                	</div>
+		                	<div class="skill1">
+		                		<canvas id="canvas2" class="skill-img" width="500" height="500" style="background:transparent;"></canvas>
+		                		<div class="skill-text">Android</div>
+		                	</div>
+		                	<div class="skill1">
+		                		<canvas id="canvas3" class="skill-img" width="500" height="500" style="background:transparent;"></canvas>
+		                		<div class="skill-text">Jquery</div>
+		                	</div>
+		                	<div class="skill1">
+		                		<canvas id="canvas4" class="skill-img" width="500" height="500" style="background:transparent;"></canvas>
+		                		<div class="skill-text">Bootstrap</div>
+		                	</div>
+		                </div>
+					</div>
+			</div>
+			
+			<div class="four-contain" id="four">
+					<div class="first-center">
+		                <div class="top">
+		                	<div class="top1">联系我</div>
+		                	<div class="top2">to contact <strong>me</strong></div>
+		                </div>
+		                <div class="left">
+		                	<div class="left1">联系电话：15881625931</div>
+		                	<div class="left2">二维码</div>
+		                </div>
+		                <div class="right">
+		                	<div class="right1"><i>邮箱</i>：1129896749@qq.com</div>
+		                	<div class="right2">QQ:1129896749</div>
+		                </div>
+					</div>
+			</div>
+		</div>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.zySlide.js"></script>
+	<script src="js/index.js"></script>
+	<script type="text/javascript" src="js/animation.js" ></script>
+	</body>
+</html>
